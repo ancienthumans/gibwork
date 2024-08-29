@@ -7,27 +7,28 @@ import { motion } from "framer-motion";
 import { FADE_UP_ANIMATION_VARIANTS } from "@/lib/framer-variants";
 
 const workDetails = [
-  { image: "/cat-cake.png", title: "Create a FAQ list for gibwork", amount: 1, token: "sol" },
+  { image: "/tasks/image-04.png", title: "Create a FAQ list for gibwork", amount: 1, token: "sol" },
+
   {
-    image: "/cat-cake.png",
-    title: "Share a link to your most used dApp",
-    amount: 100,
-    token: "usdc",
-  },
-  {
-    image: "/cat-cake.png",
+    image: "/tasks/image-01.png",
     title: "Design gibwork's new landing page",
     amount: 500,
     token: "usdc",
   },
   {
-    image: "/cat-cake.png",
+    image: "/tasks/image-02.png",
     title: "Create developer challenges for Zircon",
     amount: 500,
     token: "usdc",
   },
   {
-    image: "/cat-cake.png",
+    image: "/tasks/image-04.png",
+    title: "Share a link to your most used dApp",
+    amount: 100,
+    token: "usdc",
+  },
+  {
+    image: "/tasks/image-03.png",
     title: "Use slug- to share a set of links on X or Reddit",
     amount: 100,
     token: "usdc",
