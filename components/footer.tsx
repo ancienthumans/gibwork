@@ -4,8 +4,7 @@ import Link from "next/link";
 import logo from "@/public/gibwork-logo.jpeg";
 import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
-import { ArrowRight, ArrowUp, ExternalLink } from "lucide-react";
-import { Button } from "./ui/button";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { YoutubeLogoMark } from "./logo/youtube";
 import { DiscordLogoMark } from "./logo/discord";
 import { TwitterLogoMark } from "./logo/twitter";
@@ -13,7 +12,7 @@ import { TwitterLogoMark } from "./logo/twitter";
 export function Footer() {
   return (
     <footer className="relative w-full sm:pb-12 sm:px-6">
-      <div className="w-full max-w-7xl mx-auto p-6 sm:p-8 shadow-sm sm:border border-0 border-t sm:rounded-lg rounded-none flex flex-col">
+      <div className="w-full max-w-7xl mx-auto p-4 sm:p-8 shadow-sm sm:border border-0 border-t sm:rounded-lg rounded-none flex flex-col">
         <div className="flex items-start gap-4 w-full justify-between gap-x-40 md:flex-row flex-col gap-y-12">
           <div className="flex items-start flex-col">
             <div className="flex items-center gap-2">
@@ -51,12 +50,19 @@ export function Footer() {
                 Team
                 <ArrowRight className="inline-block size-4 group-hover:scale-100 scale-0 transition-all ml-1" />
               </Link>
+              <Link
+                href={"/#faq"}
+                className="text-muted-foreground transition-all hover:text-foreground group"
+              >
+                FAQ
+                <ArrowRight className="inline-block size-4 group-hover:scale-100 scale-0 transition-all ml-1" />
+              </Link>
             </div>
 
             <div className="text-sm flex flex-col gap-2 items-start">
               <p className="font-semibold">Resources</p>
               <Link
-                href={"/#about"}
+                href={"#"}
                 className="text-muted-foreground transition-all hover:text-foreground group"
               >
                 Privacy Policy
@@ -64,7 +70,7 @@ export function Footer() {
               </Link>
 
               <Link
-                href={"/#testimonial"}
+                href={"#"}
                 className="text-muted-foreground transition-all hover:text-foreground group"
               >
                 Terms of Use
@@ -84,7 +90,7 @@ export function Footer() {
               <YoutubeLogoMark className="size-5" />
             </Link>
             <Link
-              href={siteConfig.discordUrl}
+              href={siteConfig.description}
               target="_blank"
               className="hover:scale-105 transition-all"
             >

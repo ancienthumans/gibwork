@@ -11,13 +11,13 @@ const members = [
   {
     image: "/members/nikhilkr_tw.jpg",
     name: "Nikhil Kumar",
-    xUrl: "https://x.com/nikhilkr_tw",
+    xUrl: "https://twitter.com/intent/follow?screen_name=nikhilkr_tw",
     discordUrl: "https://discord.com/users/569966649889783810",
   },
   {
     image: "/members/0xNullRef.jpg",
     name: "0xNullRef",
-    xUrl: "https://x.com/0xNullRef",
+    xUrl: "https://twitter.com/intent/follow?screen_name=0xNullRef",
     discordUrl: "https://discord.com/users/798963371511906334",
   },
 ];
@@ -47,7 +47,7 @@ export function Team() {
       </motion.p>
       <motion.h2
         variants={FADE_UP_ANIMATION_VARIANTS}
-        className="font-semibold text-4xl text-center"
+        className="font-semibold text-3xl sm:text-4xl text-center"
       >
         Discover the team behind gibwork
       </motion.h2>
@@ -72,7 +72,7 @@ export function Team() {
               <p className="mt-4 text-center">{_member.name}</p>
               <div className="flex items-center justify-center mt-2 gap-4">
                 <Link
-                  href={_member.xUrl}
+                  href={_member.discordUrl}
                   target="_blank"
                   className=" transition-all hover:scale-105"
                 >

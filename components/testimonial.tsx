@@ -12,7 +12,7 @@ export function Testimonial() {
   return (
     <section
       id="testimonial"
-      className="relative py-16 sm:py-24 px-6 flex flex-col mx-auto w-full max-w-7xl"
+      className="relative py-16 sm:py-24 px-4 sm:px-6 flex flex-col mx-auto w-full max-w-7xl"
     >
       <div className="flex lg:items-start gap-x-12 gap-y-12 lg:flex-row flex-col">
         <motion.div
