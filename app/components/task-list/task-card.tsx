@@ -75,7 +75,7 @@ export function TaskCard({ task }: { task: Task }) {
             {task.isFeatured && <Badge>Featured</Badge>}
 
             {task.tags.map((tag) => (
-              <Badge variant={"outline"} className="capitalize">
+              <Badge key={task.title + tag} variant={"outline"} className="capitalize">
                 {tag}
               </Badge>
             ))}
@@ -84,6 +84,7 @@ export function TaskCard({ task }: { task: Task }) {
           <div className="flex items-center mt-4">
             {task.taskSubmissions.slice(0, 4).map((submission, i) => (
               <img
+                key={i + "participant"}
                 src={"https://api.dicebear.com/9.x/thumbs/svg?seed=1"}
                 className={cn("size-4 rounded-full bg-muted", i !== 0 && "-ml-1")}
               />
