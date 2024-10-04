@@ -1,8 +1,6 @@
-"use client";
-
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BadgeCheck } from "lucide-react";
+import { BadgeCheck, Stars } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -45,7 +43,7 @@ export function TaskCard({ task }: { task: Task }) {
     <Link href={"#"}>
       <Card
         className={cn(
-          "relative p-4 flex gap-4 hover:shadow-md transition-all",
+          "relative p-4 flex gap-4 transition-all hover:ring-2 hover:ring-primary",
           !task.isOpen && "bg-muted"
         )}
       >
@@ -61,7 +59,7 @@ export function TaskCard({ task }: { task: Task }) {
               className="size-6 rounded-full bg-muted mr-2 sm:hidden border"
             />
 
-            <p className="text-sm">@{task.user.username}</p>
+            <p className="text-sm">{task.user.username}</p>
 
             {/* Or add a user.verified field to show the badge only for team members */}
             {task.user.isPhoneVerified && (
@@ -72,7 +70,12 @@ export function TaskCard({ task }: { task: Task }) {
           <p className="font-semibold sm:text-lg mt-1">{task.title}</p>
 
           <div className="flex items-center gap-1 mt-1 flex-wrap">
-            {task.isFeatured && <Badge>Featured</Badge>}
+            {task.isFeatured && <Badge className="rounded-[4px]">Featured</Badge>}
+            {true && (
+              <Badge className="bg-emerald-600 text-emerald-50 border-emerald-600 rounded-[4px]">
+                PR Required
+              </Badge>
+            )}
 
             {task.tags.map((tag) => (
               <Badge key={task.title + tag} variant={"outline"} className="capitalize">
