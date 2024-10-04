@@ -38,7 +38,7 @@ export function TaskContent() {
     <div className="grid gap-4">
       <Card>
         <CardHeader>
-          <CardTitle>Don't Have Any Work to Do?</CardTitle>
+          <CardTitle>Don&apos;t Have Any Work to Do?</CardTitle>
           <CardDescription>
             Create a personalized service where others can submit requests directly to you.
           </CardDescription>

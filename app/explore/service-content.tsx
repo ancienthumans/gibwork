@@ -38,7 +38,7 @@ export function ServiceContent() {
     <div className="grid gap-4">
       <Card>
         <CardHeader>
-          <CardTitle>Can't Find the Service You Need?</CardTitle>
+          <CardTitle>Can&apos;t Find the Service You Need?</CardTitle>
           <CardDescription>Create your own unique task for others to complete.</CardDescription>
         </CardHeader>
         <CardContent>
