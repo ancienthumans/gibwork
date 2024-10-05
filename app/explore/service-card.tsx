@@ -5,7 +5,7 @@ export function ServiceCard({ service }: { service?: any }) {
   return (
     <Link href={"#"}>
       <Card className="transition-all group hover:ring-2 hover:ring-primary">
-        <CardHeader className="p-4">
+        <CardHeader className="p-3 sm:p-4">
           <div className="overflow-hidden rounded-sm aspect-video w-full">
             <img
               src="https://plus.unsplash.com/premium_photo-1661878091370-4ccb8763756a?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -21,7 +21,7 @@ export function ServiceCard({ service }: { service?: any }) {
                 src="https://plus.unsplash.com/premium_photo-1661878091370-4ccb8763756a?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="size-6 rounded-full"
               />
-              <p className="text-sm">Xander</p>
+              <p className="text-sm">@Xander</p>
             </div>
 
             <div className="flex items-center gap-1">
@@ -33,7 +33,9 @@ export function ServiceCard({ service }: { service?: any }) {
             </div>
           </div>
 
-          <p className="font-semibold">I will create a beat for you in any genre of your choice!</p>
+          <p className="font-semibold sm:text-lg text-base">
+            I will create a beat for you in any genre of your choice!
+          </p>
 
           <div>
             <p className="text-sm">0 Order</p>

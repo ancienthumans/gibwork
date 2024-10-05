@@ -36,14 +36,23 @@ export function ServiceContent() {
 
   return (
     <div className="grid gap-4">
-      <Card>
-        <CardHeader>
-          <CardTitle>Can&apos;t Find the Service You Need?</CardTitle>
-          <CardDescription>Create your own unique task for others to complete.</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <Button>Create a Task</Button>
-        </CardContent>
+      <Card className="relative z-0 overflow-hidden">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1661878091370-4ccb8763756a?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          className="absolute inset-0 object-cover h-full w-full -z-10"
+        />
+
+        <div className="sm:bg-gradient-to-r bg-gradient-to-t from-black via-black/90 to-transparent sm:pt-0 pt-40">
+          <CardHeader>
+            <CardTitle className="text-white">Can&apos;t Find the Service You Need?</CardTitle>
+            <CardDescription className="text-white/80">
+              Create your own unique task for others to complete.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <Button>Create a Task</Button>
+          </CardContent>
+        </div>
       </Card>
       <div className="flex gap-2 flex-wrap">
         <div className="relative grow">
