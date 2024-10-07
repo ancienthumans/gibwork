@@ -5,7 +5,7 @@ import { ServiceContent } from "./service-content";
 export default function Home() {
   return (
     <div className="mx-auto w-full max-w-6xl py-24 px-4 sm:px-6 grid gap-6">
-      <Tabs defaultValue="task" className="flex flex-col overflow-hidden">
+      <Tabs defaultValue="task">
         <TabsList className="w-full flex mb-4 justify-start bg-transparent border-b rounded-none p-0 h-auto overflow-auto">
           <TabsTrigger
             value="task"
