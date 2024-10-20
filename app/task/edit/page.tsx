@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-3xl py-24 px-4 sm:px-6 grid gap-8">
+    <div className="mx-auto w-full max-w-3xl py-16 sm:py-24 px-4 sm:px-6 grid gap-8">
       <Link
         href={"/task"}
         className="flex group items-center text-muted-foreground text-sm gap-1 mr-auto"
@@ -17,18 +17,18 @@ export default function Home() {
         <ArrowLeft className="size-4 group-hover:-translate-x-1 transition-all" /> Back
       </Link>
 
-      <div>
-        <h1 className="font-semibold text-xl">Edit Task</h1>
-        <p className="text-muted-foreground text-sm truncate">🚀 Raid to Earn 🚀</p>
-      </div>
-
       <div className="flex flex-col gap-6">
-        <div className="space-y-1.5">
+        <div>
+          <h1 className="font-semibold text-lg sm:text-xl">Edit Task</h1>
+          <p className="text-muted-foreground text-sm truncate">🚀 Raid to Earn 🚀</p>
+        </div>
+
+        <div className="flex flex-col gap-2">
           <Label>Title</Label>
           <Input placeholder="Title" />
         </div>
 
-        <div className="space-y-1.5">
+        <div className="flex flex-col gap-2">
           <Label>Description</Label>
 
           <p className="text-muted-foreground text-xs">
@@ -39,7 +39,7 @@ export default function Home() {
           <Textarea rows={8} placeholder="wysiwug..." />
         </div>
 
-        <div className="flex flex-wrap gap-3 ml-auto">
+        <div className="flex flex-wrap gap-2 justify-end">
           <Button variant={"secondary"}>Cancel</Button>
           <Button>Update Task</Button>
         </div>

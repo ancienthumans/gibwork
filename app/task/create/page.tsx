@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Check, ChevronDown, ChevronRight, Plus, Wallet } from "lucide-react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { CalendarIcon } from "@radix-ui/react-icons";
@@ -44,7 +44,7 @@ export default function Home() {
     <div>
       <div className="p-4 border-b flex flex-wrap gap-2 items-center">
         {steps.map((step, index) => (
-          <>
+          <Fragment key={index + "tab"}>
             <button
               onClick={() => setCurrentStep(index + 1)}
               className="flex items-center gap-2 font-semibold"
@@ -70,7 +70,7 @@ export default function Home() {
             </button>
 
             {index !== steps.length - 1 && <ChevronRight className="size-4" />}
-          </>
+          </Fragment>
         ))}
       </div>
 
@@ -323,7 +323,7 @@ export default function Home() {
 
         <Separator className="sm:hidden" />
 
-        <div className="flex flex-wrap gap-3 ml-auto">
+        <div className="flex flex-wrap gap-2 justify-end">
           {currentStep > 1 && (
             <Button onClick={() => setCurrentStep(currentStep - 1)} variant={"secondary"}>
               Prev
