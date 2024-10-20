@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site-config";
 import og from "@/public/og.png";
 
+import { ThemeProvider } from "next-themes";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -78,7 +80,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("flex min-h-screen flex-col", inter.className)}>{children}</body>
+      <body className={cn("flex min-h-screen flex-col", inter.className)}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}{" "}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
