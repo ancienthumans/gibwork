@@ -79,6 +79,10 @@ export default function Home() {
               <p className="text-xs text-muted-foreground">($100 USD)</p>
             </div>
             <Progress value={33} className="mt-2" />
+            <p className="text-muted-foreground text-xs text-right mt-2">
+              Minimum payout: <span className="text-foreground font-semibold">100 USDC</span> ($10
+              USD)
+            </p>
           </div>
         </div>
 
