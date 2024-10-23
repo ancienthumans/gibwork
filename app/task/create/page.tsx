@@ -85,12 +85,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-y-1.5">
+            <div className="flex flex-col gap-2">
               <Label>Title</Label>
               <Input placeholder="Title" />
             </div>
 
-            <div className="space-y-1.5">
+            <div className="flex flex-col gap-2">
               <Label>Description</Label>
 
               <p className="text-muted-foreground text-xs">
@@ -101,7 +101,7 @@ export default function Home() {
               <Textarea rows={8} placeholder="wysiwug..." />
             </div>
 
-            <div className="space-y-1.5">
+            <div className="flex flex-col gap-2">
               <Label>Tags</Label>
               <p className="text-muted-foreground text-xs">
                 Select up to 2 tags that best describe the task you are about to create.
@@ -141,7 +141,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="space-y-1.5">
+            <div className="flex flex-col gap-2">
               <Label>Deadline</Label>
 
               <p className="text-muted-foreground text-xs">
@@ -253,8 +253,18 @@ export default function Home() {
           <Card className="flex flex-col gap-6 p-0 sm:p-6 sm:border border-0 sm:shadow-sm shadow-none">
             <h1 className="font-semibold text-lg sm:text-xl">Additional Options</h1>
 
-            <div className="flex flex-row items-center justify-between rounded-lg border p-3 shadow-sm">
-              <div className="space-y-0.5">
+            <div className="flex sm:flex-row flex-col justify-between gap-2 sm:items-center">
+              <div className="flex flex-col gap-2">
+                <Label>Approval Amount</Label>
+                <p className="text-xs text-muted-foreground">
+                  Enter the number of submissions that will be accepted.
+                </p>
+              </div>
+              <Input defaultValue={1} className="max-w-16 text-right" />
+            </div>
+
+            <div className="flex sm:flex-row flex-col justify-between gap-2 sm:items-center">
+              <div className="flex flex-col gap-2">
                 <Label>Private Task</Label>
                 <p className="text-xs text-muted-foreground">
                   Task will be hidden and can only be accessed via link.
