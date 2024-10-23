@@ -2,11 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { useState } from "react";
 
 export function SubmissionCard({ data }: { data: any }) {
-  const [edit, setEdit] = useState(false);
-
   return (
     <div className="flex flex-col gap-3">
       <div className="flex justify-between items-center gap-2 flex-wrap">
@@ -43,8 +40,8 @@ export function SubmissionCard({ data }: { data: any }) {
           </div>
         )}
 
-        {true && !edit && (
-          <Button onClick={() => setEdit(true)} size={"sm"} variant={"outline"} className="ml-auto">
+        {false && (
+          <Button size={"sm"} variant={"outline"} className="ml-auto">
             Edit
           </Button>
         )}
@@ -52,11 +49,11 @@ export function SubmissionCard({ data }: { data: any }) {
         {false && <p className="text-sm text-muted-foreground font-semibold">Rejected</p>}
       </div>
 
-      {edit ? (
+      {false ? (
         <div className="flex flex-col gap-3">
           <Textarea rows={8} placeholder="WYSIWYG COMPONENT" />
           <div className="flex gap-2 ml-auto flex-wrap justify-end">
-            <Button onClick={() => setEdit(false)} size={"sm"} variant={"outline"}>
+            <Button size={"sm"} variant={"outline"}>
               Cancel
             </Button>
             <Button size={"sm"}>Update</Button>
