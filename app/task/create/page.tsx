@@ -5,7 +5,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Check, ChevronDown, ChevronRight, Plus, Wallet } from "lucide-react";
+import { Check, ChevronDown, ChevronRight, CircleHelp, Plus, Wallet } from "lucide-react";
 import { Fragment, useState } from "react";
 
 import { cn } from "@/lib/utils";
@@ -28,6 +28,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import { Textarea } from "@/components/ui/textarea";
 import { Separator } from "@/components/ui/separator";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const frameworks = ["Next.js", "SvelteKit", "Nuxt.js", "Remix", "Astro"];
 const steps = ["Overview", "Requirements", "Additional Options", "Deposit & Publish"];
@@ -309,6 +310,44 @@ export default function Home() {
                   placeholder="0.00"
                   className="grow min-w-0 w-full focus:outline-none sm:text-lg h-10 placeholder:text-muted-foreground text-right bg-transparent border-none font-semibold pr-0"
                 />
+              </div>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-center flex-wrap gap-2">
+                <p className="text-muted-foreground text-sm">Deposit</p>
+                <p className="font-bold text-sm text-right">500 USDC</p>
+              </div>
+
+              <div className="flex justify-between items-center flex-wrap gap-2">
+                <p className="text-muted-foreground text-sm">
+                  Platform Fee (5%){" "}
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <CircleHelp className="size-4 inline-block cursor-pointer" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>5% of deposit in USDC value</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </p>
+                <p className="font-bold text-sm text-right">0.01 SOL</p>
+              </div>
+
+              <div className="flex justify-between items-center flex-wrap gap-2">
+                <p className="text-muted-foreground text-sm">Transaction Fee</p>
+                <p className="font-bold text-sm text-right">0.0001 SOL</p>
+              </div>
+
+              <Separator className="my-2" />
+
+              <div className="flex justify-between items-center flex-wrap gap-2">
+                <p className="text-muted-foreground text-base font-semibold">Total</p>
+                <p className="font-bold text-foreground text-base text-right">
+                  500 USDC + 0.011 SOL
+                </p>
               </div>
             </div>
 
